@@ -1,0 +1,76 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="content-header" style="margin-bottom:30px;">
+				<h4 class="content-title grey-text text-darken-1">
+					Create Product
+				</h4>
+			</div>	
+			<div class="content">
+					<form class="createProductForm">	
+						<div class="row">
+							<div class="col s12 m4">
+								<div class="product-images white">
+									<div ngf-drop ng-model="files" class="drop-box" 
+  										ngf-drag-over-class="dragover" ngf-allow-dir="true"
+  										ngf-accept="'image/*'">
+										<img ngf-src="files[0]" ngf-default-src="'images/placeholder.png'" 
+										ngf-accept="'image/*'" class="responsive-img">
+  									</div>	
+  								</div>
+							</div>
+							<div class="col s12 m8">
+								<div class="product-detail white">
+									<div class="row">
+										<div class="input-field col s12">
+											<input id="productName" type="text" class="validate" ng-model="product.name">
+          									<label for="productName">Name</label>
+										</div>
+										<div class="input-field col s12">
+											<textarea id="description" class="materialize-textarea" ng-model="product.description"></textarea>
+          									<label for="description">Description</label>
+										</div>	
+									</div>
+									<div class="row">
+										<div class="input-field col s6">
+											<input id="mrp" type="text" class="validate" ng-model="product.mrp">
+          									<label for="mrp">MRP</label>
+										</div>
+										<div class="input-field col s6">
+											<input id="salePrice" type="text" class="validate" ng-model="product.salePrice">
+          									<label for="salePrice">Sale Price</label>
+										</div>												
+									</div>
+								</div>													
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<h4 class="content-title grey-text text-darken-1">
+									Product Details
+								</h4>
+								<div class="row" ng-repeat="spec in specs">
+									<div class="input-field col s4">
+										<input type="text" class="validate">
+										<label>Key</label>
+									</div>
+									<div class="input-field col s8">
+										<input type="text" class="validate">
+										<label>Value</label>
+									</div>									
+								</div>
+								<button type="button" class="btn waves-effect waves-light" ng-click="addMoreSpecs()">Add More</button>								
+							</div>
+						</div>
+						<div class="row">
+							<div class="col s12">
+								<h4 class="content-title grey-text text-darken-1">
+									Similar Products
+								</h4>																
+							</div>
+						</div>
+					</form>	
+			</div>
+		</div>
+	</div>
+</div>

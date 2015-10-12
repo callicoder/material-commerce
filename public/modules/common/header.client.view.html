@@ -1,0 +1,163 @@
+      <nav class="top-nav teal lighten-2">
+          <div class="header-container">
+              <div class="nav-wrapper">
+                  <a class="page-title hide-on-med-and-down left">
+                    Material Admin
+                  </a>
+                  <ul class="right">
+                    <li><a href=""><i class="mdi-action-search"></i></a></li>
+                    <li><a href=""><i class="mdi-communication-live-help"></i></a></li>
+                    <li>
+                      <a class='dropdown-button' data-activates='notification-dropdown' material-dropdown>
+                        <i class="mdi-social-notifications"></i>
+                        <span class="simple-badge">5</span>
+                      </a>
+                      <ul id='notification-dropdown' class='dropdown-content' style="width:340px">
+                        <li class="notification-header grey-text">
+                          <span class="blue-grey-text text-darken-1">Notifications</span>
+                        </li>
+                        <li class="divider"></li>
+                        <li class="notification-item valign-wrapper">
+                          <div class="visual left">
+                            <i class="mdi-action-done green-text text-darken-1"></i>
+                          </div>
+                          <div class="detail left">
+                            <span class="title">Product Upload</span><br>
+                            <span class="grey-text">All products uploaded successfully.</span>
+                          </div>
+                         </li> 
+                         <li class="divider"></li>
+                         <li class="notification-item valign-wrapper">
+                          <div class="visual left">
+                            <i class="mdi-navigation-close red-text text-darken-1"></i>
+                          </div>
+                          <div class="detail left">
+                            <span class="title">Image Upload</span><br>
+                            <span class="grey-text">Some error occured while uploading the images.</span>
+                          </div>
+                         </li> 
+                         <li class="divider"></li>
+                         <li class="notification-item valign-wrapper">
+                          <div class="visual left">
+                            <i class="mdi-alert-warning orange-text text-lighten-2"></i>
+                          </div>
+                          <div class="detail left">
+                            <span class="title">Product Upload</span><br>
+                            <span class="grey-text">Some products uploaded. Others had errors</span>
+                          </div>
+                         </li> 
+                         <li class="divider"></li>
+                      </ul>
+                    </li>
+                    <li>
+                        <a href="" data-activates="chat-nav" material-side-nav edge="right">
+                          <i class="mdi-communication-chat"></i>
+                        </a>
+                    </li>
+                  </ul>
+              </div>
+          </div>
+      </nav> 
+      <div class="container">
+            <a href="#" data-activates="nav-mobile" class="button-collapse top-nav full hide-on-large-only" material-side-nav edge="left">
+              <i class="mdi-navigation-menu"></i>
+            </a>
+      </div>
+      <ul id="nav-mobile" class="side-nav fixed" material-nice-scroll>
+        <li class="logo">
+            <div id="logo-container">
+              <img src="images/profile.jpg" alt="" class="circle responsive-img">
+              <div class="profile-toggle">
+                <a href="" profile-toggle class="white-text">callicoder@gmail.com</a>
+              </div> 
+            </div>
+        </li> 
+        <li class="profile-menu no-padding">
+            <ul>
+                <li><a ui-sref=".profile"><span class="mdi-social-person teal-text text-darken-2"></span>View Profile</a></li>
+                <li><a ui-sref=".changePassword"><span class="mdi-action-lock-open red-text text-darken-2"></span>Change Password</a></li>
+                <li><a href="/auth/signout"><span class="mdi-action-settings-power purple-text text-darken-2"></span>Logout</a></li>                
+            </ul>
+        </li>
+        <li class="bold"><a ui-sref=".activate"><span class="mdi-action-store blue-text text-darken-2"></span>Activation Checklist</a></li>
+        <li class="bold"><a ui-sref=".dashboard"><span class="mdi-action-dashboard teal-text text-darken-2"></span>Dashboard</a></li>
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion" material-collapsible>
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><span class="mdi-action-settings"></span>Store Setting</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="">Payment Gateway</a></li>
+                  <li><a ui-sref="home.settings.notifications">Notification</a></li>
+                  <li><a href="">Terms And Condition</a></li>
+                  <li><a href="">Default Settings</a></li>                      
+                </ul>
+              </div>
+            </li>
+            <li class="bold">
+              <a class="collapsible-header  waves-effect waves-teal">
+                <span class="mdi-file-folder cyan-text text-darken-2"></span>Categories
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a ui-sref=".category">All Categories</a></li>
+                  <li><a ui-sref=".createCategory">Create Category</a></li>
+                </ul>
+              </div>
+            </li>    
+            <li class="bold"><a class="collapsible-header  waves-effect waves-teal"><span class="mdi-action-shopping-basket green-text text-darken-2"></span>Products</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a ui-sref=".product">All Products</a></li>
+                  <li><a ui-sref=".createProduct">Create Product</a></li>
+                  <li><a href="">Upload Products</a></li>
+                </ul>
+              </div>
+            </li> 
+            <li class="bold">
+              <a class="collapsible-header  waves-effect waves-teal">
+                <span class="mdi-action-explore green-text text-lighten-1"></span>Attributes
+              </a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a ui-sref=".attribute">All attributes</a></li>
+                  <li><a href="grid.html">Create attributes</a></li>
+                </ul>
+              </div>
+            </li>                                                  
+          </ul>
+        </li>
+        <li class="bold"><a ui-sref=".files"><span class="mdi-editor-insert-drive-file teal-text text-darken-1"></span>Files</a></li>
+        <li class="bold"><a ui-sref=".order"><span class="mdi-action-work teal-text text-darken-1"></span>Orders</a></li> 
+        <li class="bold"><a ui-sref=".customer"><span class="mdi-social-people light-blue-text text-darken-1"></span>Customers</a></li> 
+        <li class="bold"><a ui-sref=".report"><span class="mdi-content-report blue-grey-text text-darken-1"></span>Reports</a></li> 
+        <li class="bold"><a ui-sref=".design"><span class="mdi-av-album blue-text text-darken-1"></span>Store design</a></li>               
+      </ul> 
+
+
+
+  <ul id="chat-nav" class="side-nav right" style="width:300px;" ng-controller="chatController">
+    <li class="chat-header row">
+        <img src="images/personalAssistant.png" class="circle responsive-img"> 
+        <span>Personal Assistant</span>
+    </li>
+    <li class="chat-body">
+        <div ng-repeat="message in messages track by $index">
+            {{message.text}}
+        </div>
+    </li>
+    <li class="chat-footer">
+      <form name="chat-form" id="chat-form" ng-submit="sendMessage()">
+        <div class="row">
+          <div class="input-field">
+            <input id="message" type="text" ng-model="messageText" autocomplete="off">
+            <label for="message">Message</label>
+          </div>
+          <div>
+            <button type="submit" class="teal-text waves-effect waves-light send-action">
+              <i class="mdi-content-send"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+    </li>
+  </ul> 

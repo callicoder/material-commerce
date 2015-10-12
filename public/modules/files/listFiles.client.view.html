@@ -1,0 +1,18 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="content-header">
+				<h4 class="content-title grey-text text-darken-2">Uploaded Files</h4>
+			</div>
+			<div class="content">
+				<div class="row">
+					<div class="col s12">
+						<div class="file" ng-repeat="file in files | orderBy:'created_at':true">
+							<img ng-src="{{file.url}}">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

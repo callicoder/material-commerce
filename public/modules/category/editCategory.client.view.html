@@ -1,0 +1,49 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="content-header" style="margin-bottom:30px;">
+				<h4 class="content-title grey-text text-darken-2">
+					<a ui-sref="home.category">All Categories</a>
+					<span><i class="mdi-hardware-keyboard-arrow-right"></i>Edit Category</span>
+				</h4>
+			</div>
+			<div class="content">
+				<div class="row">
+					<div class="col s12 m6 l5">
+						<div class="card no-shadow save-category-card">
+							<div class="card-image">
+								<img ng-src="{{category.image.src}}" class="responsive-img">
+							</div>
+						</div>
+					</div>
+					<div class="col s12 m6" style="margin-top:20px;">
+						<form ng-submit="editCategory()">
+							 <div class="input-field">
+    							<select material-select ng-model="parentCategory">
+      								<option value="" disabled selected>Choose your option</option>
+      								<option value="Photography">Photography</option>
+      								<option value="Computers">Computers</option>
+      								<option value="Mobiles">Mobiles</option>
+      								<option value="Entertainment">TV & Entertainment</option>  
+      								<option value="Camcorders">Camcorders</option>      								
+    							</select>
+    							<label>Parent Category</label>
+  							</div>
+							<div class="input-field">
+          						<input id="category_name" type="text" class="validate" ng-model="category.name">
+          						<label for="category_name">Name</label>
+        					</div>
+							<div class="input-field">
+          						<textarea id="textarea1" class="materialize-textarea" ng-model="category.description"></textarea>
+         						<label for="textarea1">Description</label>
+        					</div>
+        					  <button class="btn waves-effect waves-light red" type="submit" name="action">Save &nbsp;
+    								<i class="mdi-content-send" style="vertical-align:middle"></i>
+  							  </button>
+						</form>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

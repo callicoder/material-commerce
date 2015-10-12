@@ -1,0 +1,30 @@
+{
+  "name": "extraMaterial",
+  "version": "1.0.0",
+  "authors": [
+    "callicoder",
+    "ambush"
+  ],
+  "description": "Material Design template",
+  "main": "server.js",
+  "keywords": [
+    "Material"
+  ],
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "~0.97.0",
+    "nicescroll": "~3.6.0",
+    "angular": "~1.4.3",
+    "angular-animate": "~1.4.3",
+    "angular-ui-router": "~0.2.15",
+    "animate.css": "~3.3.0",
+    "ng-file-upload": "~6.0.4"
+  }
+}

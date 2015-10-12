@@ -1,0 +1,110 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="content-header files-header">
+				<h4 class="content-title grey-text text-darken-2">Files</h4>
+				<a class="btn waves-effect waves-light" ui-sref="home.listFiles">View uploaded files</a>
+			</div>
+			<div class="content files">
+				<div class="row">
+					<div class="col s12">
+						<form name="fileUploadForm">
+							<div ngf-drop ng-model="file" class="drop-box col s12" 
+  								ngf-drag-over-class="dragover" ngf-allow-dir="true"
+  								ngf-accept="'image/*'" ng-class="{'error': validationError}">	
+  								<div class="button select-file" ngf-select ng-model="file">
+  									<h5 class="valign" ng-hide="file">Upload Image. Recommended Size is 1024 x 1024.</h5>
+  									<div class="image-info" ng-if="file">
+  										<h5>
+  											<span>File Name: {{file.name}}</span>, <span>Size: {{file.size}}</span>, <span>Dimension: {{imageWidth}} x {{imageHeight}}</span>
+  										</h5>
+  										<span class="error red-text">{{validationError}}</span>
+  									</div>	
+  								</div>
+							</div>
+						</form>
+					</div>	
+				</div>
+
+				<div class="row" ng-show="previewImage">
+					<div class="col s12">
+						<h4 id="resize-heading" class="content-title grey-text text-darken-2">Choose how your images will be resized.</h4>
+						<span>Or <a href="" ng-click="resizeFilesOnServer()">Let us handle this for you.</a></span>
+					</div>
+					<div class="col s12">
+						<ul class="tabs" material-tabs>
+        					<li class="tab col s3"><a class="active" href="#resize1" ng-click="resizeableImage('#resize1 img', file, 755, 450)">Horizontal</a></li>
+        					<li class="tab col s3"><a href="#resize2" ng-click="resizeableImage('#resize2 img', file, 365, 450)">Vertical</a></li>
+        					<li class="tab col s3"><a href="#resize3" ng-click="resizeableImage('#resize3 img', file, 365, 212)">Horizontal Small</a></li>
+        					<li class="tab col s3"><a href="#resize4" ng-click="resizeableImage('#resize4 img', file, 380, 380)">Gallery</a></li>
+      					</ul>						
+					</div>
+					<div id="resize1" class="preview-container col s12">
+						<div class="overlay">
+							<div class="overlay-inner">
+							</div>
+						</div>
+						<div class="resize-container">
+							<span class="resize-handle resize-handle-nw"></span>
+							<span class="resize-handle resize-handle-ne"></span>
+    						<span class="resize-handle resize-handle-n"></span>
+    						<span class="resize-handle resize-handle-e"></span>
+							<img ngf-src="file" ngf-accept="'image/*'" class="responsive-img">
+    						<span class="resize-handle resize-handle-w"></span>
+    						<span class="resize-handle resize-handle-s"></span>
+							<span class="resize-handle resize-handle-se"></span>
+    						<span class="resize-handle resize-handle-sw"></span>
+						</div>
+						<button class="btn waves-effect waves-light red js-crop">Crop and Save</button>
+					</div>
+    				<div id="resize2" class="preview-container col s12">
+    					<div class="overlay">
+							<div class="overlay-inner">
+							</div>
+						</div>
+    					<div class="resize-container">
+    						<span class="resize-handle resize-handle-nw"></span>
+    						<span class="resize-handle resize-handle-ne"></span>
+    						<span class="resize-handle resize-handle-n"></span>
+    						<span class="resize-handle resize-handle-e"></span>
+    						<img ngf-src="file" ngf-accept="'image/*'" class="responsive-img">
+    						<span class="resize-handle resize-handle-w"></span>
+    						<span class="resize-handle resize-handle-s"></span>
+    						<span class="resize-handle resize-handle-se"></span>
+    						<span class="resize-handle resize-handle-sw"></span>
+    					</div>
+						<button class="btn waves-effect waves-light red js-crop">Crop and Save</button>
+    				</div>
+    				<div id="resize3" class="preview-container col s12">
+    					<div class="overlay">
+							<div class="overlay-inner">
+							</div>
+						</div>
+    					<div class="resize-container">
+    						<span class="resize-handle resize-handle-nw"></span>
+    						<span class="resize-handle resize-handle-ne"></span>
+    						<img ngf-src="file" ngf-accept="'image/*'" class="responsive-img">
+    						<span class="resize-handle resize-handle-se"></span>
+    						<span class="resize-handle resize-handle-sw"></span>
+    					</div>
+						<button class="btn waves-effect waves-light red js-crop">Crop and Save</button>
+    				</div>
+    				<div id="resize4" class="preview-container col s12">
+    					<div class="overlay">
+							<div class="overlay-inner">
+							</div>
+						</div>
+    					<div class="resize-container">
+    						<span class="resize-handle resize-handle-nw"></span>
+    						<span class="resize-handle resize-handle-ne"></span>
+    						<img ngf-src="file" ngf-accept="'image/*'" class="responsive-img">
+    						<span class="resize-handle resize-handle-se"></span>
+    						<span class="resize-handle resize-handle-sw"></span>
+    					</div>
+						<button class="btn waves-effect waves-light red js-crop">Crop and Save</button>    						
+    				</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>

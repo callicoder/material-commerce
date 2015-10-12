@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="content-header" style="margin-bottom:30px;">
+				<h4 class="content-title grey-text text-darken-2">
+					<a ui-sref="home.category">All Categories</a>
+					<span><i class="mdi-hardware-keyboard-arrow-right"></i>Create New Category</span>
+				</h4>
+			</div>
+			<div class="content">
+				<div class="row">
+					<form name="createCategoryForm" ng-submit="createCategory()">
+						<div class="col s12 m6 l5">
+							<div ngf-drop ng-model="file" class="drop-box" 
+  								ngf-drag-over-class="dragover" ngf-allow-dir="true"
+  								ngf-accept="'image/*'">
+								<img ngf-src="file" ngf-default-src="'images/categoryPlaceholder.png'" ngf-accept="'image/*'"
+								 class="responsive-img">
+  							</div>
+						</div>
+						<div class="col s12 m6" style="margin-top:20px;">
+							 <div class="input-field">
+    							<select material-select ng-model="category.parent">
+      								<option value="" disabled selected>Choose your option</option>
+      							</select>
+    							<label>Parent Category</label>
+  							</div>
+							<div class="input-field">
+          						<input id="category_name" type="text" class="validate" ng-model="category.name">
+          						<label for="category_name">Name</label>
+        					</div>
+							<div class="input-field">
+          						<textarea id="textarea1" class="materialize-textarea" ng-model="category.description"></textarea>
+         						<label for="textarea1">Description</label>
+        					</div>
+        					  <button class="btn waves-effect waves-light red" type="submit" name="action">Save &nbsp;
+    								<i class="mdi-content-send" style="vertical-align:middle"></i>
+  							  </button>
+						</div>	
+					</form>				
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

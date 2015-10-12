@@ -1,0 +1,166 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="content-header">
+				<h4 class="content-title grey-text text-darken-1">
+					<a ui-sref="home.category">All Categories</a> 
+					<span ng-show="parentCategory"><i class="mdi-hardware-keyboard-arrow-right"></i> {{parentCategory}}</span>
+				</h4>
+			</div>
+			<div class="content category-content">
+				<ul class="row">
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Digital Cameras'})">
+									<img src="/images/digitalCameras.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content left-align" style="padding-left:20px;padding-right:10px;">
+								<div class="card-title grey-text text-darken-4">
+									<a class="grey-text text-darken-4" 
+										ui-sref="home.categoryDetails({categoryId:'Digital Cameras'})">
+										Digital Cameras 
+									</a>
+									<a class='dropdown-button right blue-grey-text text-darken-2' href='#' data-activates='dropdown1' material-dropdown>
+										<i class="mdi-navigation-more-vert"></i>
+									</a>
+  									<ul id='dropdown1' class='dropdown-content'>
+    									<li><a href="">Edit</a></li>
+    									<li><a href="">Delete</a></li>
+  									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Film Cameras'})">
+									<img src="/images/filmCameras.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content left-align" style="padding-left:20px;padding-right:10px;">
+								<div class="card-title grey-text text-darken-4">
+									<a class="grey-text text-darken-4" 
+										ui-sref="home.categoryDetails({categoryId:'Film Cameras'})">
+										Film Cameras 
+									</a>
+									<a class='dropdown-button right blue-grey-text text-darken-2' href='#' data-activates='dropdown2' material-dropdown>
+										<i class="mdi-navigation-more-vert"></i>
+									</a>
+  									<ul id='dropdown2' class='dropdown-content'>
+    									<li><a href="">Edit</a></li>
+    									<li><a href="">Delete</a></li>
+  									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Lenses'})">
+									<img src="/images/lenses.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content left-align" style="padding-left:20px;padding-right:10px;">
+								<div class="card-title grey-text text-darken-4">
+									<a class="grey-text text-darken-4" 
+										ui-sref="home.categoryDetails({categoryId:'Lenses'})">
+										Lenses 
+									</a>
+									<a class='dropdown-button right blue-grey-text text-darken-2' href='#' data-activates='dropdown3' material-dropdown>
+										<i class="mdi-navigation-more-vert"></i>
+									</a>
+  									<ul id='dropdown3' class='dropdown-content'>
+    									<li><a href="">Edit</a></li>
+    									<li><a href="">Delete</a></li>
+  									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Batteries & Power'})">
+									<img src="/images/batteries.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content left-align" style="padding-left:20px;padding-right:10px;">
+								<div class="card-title grey-text text-darken-4">
+									<a class="grey-text text-darken-4" 
+										ui-sref="home.categoryDetails({categoryId:'Batteries & Power'})">
+										Batteries & Power
+									</a>
+									<a class='dropdown-button right blue-grey-text text-darken-2' href='#' data-activates='dropdown4' material-dropdown>
+										<i class="mdi-navigation-more-vert"></i>
+									</a>
+  									<ul id='dropdown4' class='dropdown-content'>
+    									<li><a href="">Edit</a></li>
+    									<li><a href="">Delete</a></li>
+  									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Bags & Cases'})">
+									<img src="/images/cameraBags.jpg" class="responsive-img">
+								</a>	
+							</div>
+							<div class="card-content left-align" style="padding-left:20px;padding-right:10px;">
+								<div class="card-title grey-text text-darken-4">
+									<a class="grey-text text-darken-4" 
+										ui-sref="home.categoryDetails({categoryId:'Bags & Cases'})">
+										Bags & Cases
+									</a>
+									<a class='dropdown-button right blue-grey-text text-darken-2' href='#' data-activates='dropdown5' material-dropdown>
+										<i class="mdi-navigation-more-vert"></i>
+									</a>
+  									<ul id='dropdown5' class='dropdown-content'>
+    									<li><a href="">Edit</a></li>
+    									<li><a href="">Delete</a></li>
+  									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Support Equipments'})">
+									<img src="/images/supportEquipments.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content left-align" style="padding-left:20px;padding-right:10px;">
+								<div class="card-title grey-text text-darken-4">
+									<a class="grey-text text-darken-4" 
+										ui-sref="home.categoryDetails({categoryId:'Support Equipments'})">
+										Support Equipments
+									</a>
+									<a class='dropdown-button right blue-grey-text text-darken-2' href='#' data-activates='dropdown6' material-dropdown>
+										<i class="mdi-navigation-more-vert"></i>
+									</a>
+  									<ul id='dropdown6' class='dropdown-content'>
+    									<li><a href="">Edit</a></li>
+    									<li><a href="">Delete</a></li>
+  									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    				<a class="btn-floating btn-large red" ui-sref="home.createCategory">
+      					<i class="large mdi-content-add"></i>
+    				</a>
+  				</div>
+			</div>
+		</div>	
+	</div>	
+</div>

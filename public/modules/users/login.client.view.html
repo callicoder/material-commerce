@@ -1,0 +1,51 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="card login-content row">
+				<form name="loginForm col s12" ng-submit="login()">
+					<div class="input-field">
+						<i class="mdi-social-person prefix"></i>
+						<input id="email" type="email" ng-model="user.email" class="validate">
+          				<label for="email">Email</label>
+					</div>
+					<div class="input-field">
+						<i class="mdi-action-accessibility prefix"></i>
+						<input id="password" type="password" ng-model="user.password" class="validate" autocomplete="off">
+          				<label for="password">Password</label>
+					</div>				
+					<button type="submit" class="btn waves-effect red right">Login</button>	
+				</form>
+				<div class="or-separator">
+					<div class="or-block">or</div>
+				</div>
+				<div class="col s12 social-login">
+					<div class="row">
+						<div class="col s3">
+							<a class="btn btn-large waves-effect facebook">
+								<img src="/images/facebook.svg">
+							</a>					
+						</div>
+						<div class="col s3">
+							<a class="btn btn-large waves-effect google-plus">
+								<img src="/images/google-plus.svg">
+							</a>		
+						</div>				
+						<div class="col s3">
+							<a class="btn btn-large waves-effect twitter">
+								<img src="/images/twitter.svg">
+							</a>					
+						</div>
+						<div class="col s3">
+							<a class="btn btn-large waves-effect linkedin">
+								<img src="/images/linkedin.svg">
+							</a>		
+						</div>	
+					</div>			
+				</div>
+			</div>
+			<div class="login-navigation">
+				<span>New to MaterialAdmin? <a ui-sref="welcome.register">Sign Up</a></span>
+			</div>
+		</div>
+	</div>
+</div>

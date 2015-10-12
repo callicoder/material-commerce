@@ -1,0 +1,129 @@
+<div class="container">
+	<div class="row">
+		<div class="col s12">
+			<div class="content-header">
+				<h4 class="content-title grey-text text-darken-1">All Categories 
+					<span ng-show="parentCategory"><i class="mdi-content-forward"></i> {{parentCategory}}</span>
+				</h4>
+			</div>
+			<div class="content category-content">
+				<ul class="row">
+					<li class="col l3 m4 s6" ng-repeat="category in categories">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Photography'})">
+									<img ng-src="{{category.image.src}}" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content">
+								<a ui-sref="home.editCategory({categoryId: category._id})" 
+									class="btn-floating btn-small waves-effect waves-light teal lighten-2 edit-category">
+									<i class="mdi-editor-mode-edit"></i>
+								</a>
+								<a class="card-title grey-text text-darken-4" ui-sref="home.categoryDetails({categoryId:'Photography'})">
+									{{category.name}}
+								</a>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Computers'})">
+									<img src="/images/computers.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content">
+								<a class="btn-floating btn-small waves-effect waves-light teal lighten-2 edit-category">
+									<i class="mdi-editor-mode-edit"></i>
+								</a>
+								<a class="card-title grey-text text-darken-4" ui-sref="home.categoryDetails({categoryId:'Photography'})">Computers</a>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Mobiles'})">
+									<img src="/images/mobiles.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content">
+								<a class="btn-floating btn-small waves-effect waves-light teal lighten-2 edit-category">
+									<i class="mdi-editor-mode-edit"></i>
+								</a>
+								<a class="card-title grey-text text-darken-4" ui-sref="home.categoryDetails({categoryId:'Mobiles'})">Mobiles</a>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'TV & Entertainment'})">
+									<img src="/images/tv.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content">
+								<a class="btn-floating btn-small waves-effect waves-light teal lighten-2 edit-category">
+									<i class="mdi-editor-mode-edit"></i>
+								</a>
+								<a class="card-title grey-text text-darken-4" ui-sref="home.categoryDetails({categoryId:'TV & Entertainment'})">TV & Entertainment</a>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Camcorders'})">
+									<img src="/images/camcorders.jpg" class="responsive-img">
+								</a>	
+							</div>
+							<div class="card-content">
+								<a class="btn-floating btn-small waves-effect waves-light teal lighten-2 edit-category">
+									<i class="mdi-editor-mode-edit"></i>
+								</a>
+								<a class="card-title grey-text text-darken-4" ui-sref="home.categoryDetails({categoryId:'Camcorders'})">Camcorders</a>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Network Components'})">
+									<img src="/images/networkComponents.jpg" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content">
+								<a class="btn-floating btn-small waves-effect waves-light teal lighten-2 edit-category">
+									<i class="mdi-editor-mode-edit"></i>
+								</a>
+								<a class="card-title grey-text text-darken-4" ui-sref="home.categoryDetails({categoryId:'Network Components'})">Network components</a>
+							</div>
+						</div>
+					</li>
+					<li class="col l3 m4 s6">
+						<div class="card category-card">
+							<div class="card-image">
+								<a ui-sref="home.categoryDetails({categoryId:'Large Applicances'})">
+									<img src="/images/largeAppliances.png" class="responsive-img">
+								</a>
+							</div>
+							<div class="card-content">
+								<a class="btn-floating btn-small waves-effect waves-light teal lighten-2 edit-category">
+									<i class="mdi-editor-mode-edit"></i>
+								</a>
+								<a class="card-title grey-text text-darken-4" ui-sref="home.categoryDetails({categoryId:'Large Applicances'})">Large Applicances</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+    				<a class="btn-floating btn-large red" ui-sref="home.createCategory">
+      					<i class="large mdi-content-add"></i>
+    				</a>
+  				</div>
+			</div>
+		</div>	
+	</div>	
+</div>
